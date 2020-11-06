@@ -60,12 +60,10 @@ public class Main {
 
             String phoneNumber = scan.nextLine();
             NewStudents.removerStudent(phoneNumber);
-            NewStudents.removerStudent(phoneNumber);
 
             System.out.println(NewStudents.manyStudents + "students left");
-           // break;
+            break;
 
-            System.out.println();
         }
 
         System.out.println("End");
