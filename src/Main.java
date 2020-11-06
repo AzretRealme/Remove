@@ -35,25 +35,19 @@ public class Main {
         NewStudents.name = "NewStudents";
         System.out.println("NewStudents");
 
-        NewStudents.StudentCount(7);
+        System.out.println(students[0].name + " " + students[0].phone + " " + students[1].name + " " + students[1].phone + " " + students[2].name + " " + students[2].phone);
+        System.out.print(students[3].name + " " + students[3].phone + " " + students[4].name + " " + students[4].phone);
+        System.out.println(students[5].name + " " + students[5].phone + " " + students[6].name + " " + students[6].phone);
+
+
+        NewStudents.StudentCount(5);
         NewStudents.addStudents(students[0]);
         NewStudents.addStudents(students[1]);
         NewStudents.addStudents(students[2]);
         NewStudents.addStudents(students[3]);
         NewStudents.addStudents(students[4]);
-        NewStudents.addStudents(students[5]);
-        NewStudents.addStudents(students[6]);
-
-      /*  System.out.println(students[0].name + " " + students[0].phone + " " + students[1].name + " " + students[1].phone + " " + students[2].name + " " + students[2].phone);
-        System.out.println(students[5].name + " " + students[5].phone + " " + students[6].name + " " + students[6].phone);
-        System.out.print(students[3].name + " " + students[3].phone + " " + students[4].name + " " + students[4].phone);*/
-
-        for (Student d : NewStudents.students) {
-            if (d != null) {
-                System.out.println(d.name + " " + d.phone);
-            }
-        }
-        System.out.println();
+        students[5] = null;
+        students[6] = null;
 
         while(NewStudents.students.length > 0){
             System.out.print(" Enter students phone number to remove: ");
@@ -63,7 +57,14 @@ public class Main {
 
             System.out.println(NewStudents.manyStudents + "students left");
             break;
+        }
 
+        System.out.println(students[5] + " Aibek left " + students[6] + " Alice left");
+
+        for (Student d : NewStudents.students) {
+            if (d != null) {
+                System.out.println(d.name + " " + d.phone);
+            }
         }
 
         System.out.println("End");
