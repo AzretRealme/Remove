@@ -7,10 +7,10 @@ public class Course {
     Teacher[] teachers;
     int manyStudents;
 
-    public void TeacherCount(int count) {
+    public void teacherCount(int count) {
         teachers = new Teacher[count];
     }
-    public void StudentCount(int count) {
+    public void studentCount(int count) {
         students = new Student[count];
     }
 
