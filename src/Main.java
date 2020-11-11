@@ -7,16 +7,16 @@ public class Main {
         Teacher teacher = new Teacher("Bakdoolot Baike", "996555457854");
         Teacher teacher1 = new Teacher("Dolon Baike", "996555457854");
 
-        Course EasyIt = new Course();
-        EasyIt.name = "easyIt";
-        System.out.println("EasyIt Course Java");
+        Course easyIt = new Course();
+        easyIt.name = "easyIt";
+        System.out.println("easyIt course java");
 
-        EasyIt.TeacherCount(2);
-        boolean s1 = EasyIt.addTeachers(teacher);
-        boolean s2 = EasyIt.addTeachers(teacher1);
+        easyIt.teacherCount(2);
+        boolean s1 = easyIt.addTeachers(teacher);
+        boolean s2 = easyIt.addTeachers(teacher1);
         System.out.println(s1 + " " + s2);
 
-        for (Teacher s : EasyIt.teachers) {
+        for (Teacher s : easyIt.teachers) {
             if (s != null) {
                 System.out.println(s.name + " " + s.phone);
             }
@@ -31,37 +31,37 @@ public class Main {
         students[5] = new Student("Bermet", " 996555111111");
         students[6] = new Student("Aidana", " 996555121212");
 
-        Course NewStudents = new Course();
-        NewStudents.name = "NewStudents";
-        System.out.println("NewStudents");
+        Course newStudents = new Course();
+        newStudents.name = "newStudents";
+        System.out.println("newStudents");
 
         System.out.println(students[0].name + " " + students[0].phone + " " + students[1].name + " " + students[1].phone + " " + students[2].name + " " + students[2].phone);
         System.out.print(students[3].name + " " + students[3].phone + " " + students[4].name + " " + students[4].phone);
         System.out.println(students[5].name + " " + students[5].phone + " " + students[6].name + " " + students[6].phone);
 
 
-        NewStudents.StudentCount(5);
-        NewStudents.addStudents(students[0]);
-        NewStudents.addStudents(students[1]);
-        NewStudents.addStudents(students[2]);
-        NewStudents.addStudents(students[3]);
-        NewStudents.addStudents(students[4]);
+        newStudents.studentCount(5);
+        newStudents.addStudents(students[0]);
+        newStudents.addStudents(students[1]);
+        newStudents.addStudents(students[2]);
+        newStudents.addStudents(students[3]);
+        newStudents.addStudents(students[4]);
         students[5] = null;
         students[6] = null;
 
-        while(NewStudents.students.length > 0){
+        while(newStudents.students.length > 0){
             System.out.print(" Enter students phone number to remove: ");
 
             String phoneNumber = scan.nextLine();
-            NewStudents.removerStudent(phoneNumber);
+            newStudents.removerStudent(phoneNumber);
 
-            System.out.println(NewStudents.manyStudents + "students left");
+            System.out.println(newStudents.manyStudents + "students left");
             break;
         }
 
         System.out.println(students[5] + " Aibek left " + students[6] + " Alice left");
 
-        for (Student d : NewStudents.students) {
+        for (Student d : newStudents.students) {
             if (d != null) {
                 System.out.println(d.name + " " + d.phone);
             }
@@ -70,3 +70,7 @@ public class Main {
         System.out.println("End");
     }
 }
+
+ /*  System.out.println(students[0].name + " " + students[0].phone + " " + students[1].name + " " + students[1].phone + " " + students[2].name + " " + students[2].phone);
+        System.out.println(students[5].name + " " + students[5].phone + " " + students[6].name + " " + students[6].phone);
+        System.out.print(students[3].name + " " + students[3].phone + " " + students[4].name + " " + students[4].phone);*/
