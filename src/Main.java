@@ -36,8 +36,8 @@ public class Main {
         System.out.println("newStudents");
 
         System.out.println(students[0].name + " " + students[0].phone + " " + students[1].name + " " + students[1].phone + " " + students[2].name + " " + students[2].phone);
-        System.out.print(students[3].name + " " + students[3].phone + " " + students[4].name + " " + students[4].phone);
-        System.out.println(students[5].name + " " + students[5].phone + " " + students[6].name + " " + students[6].phone);
+        System.out.print(students[3].name + " " + students[3].phone + " " + students[4].name + " " + students[4].phone+ " ");
+        System.out.println( students[5].name + " " + students[5].phone + " " + students[6].name + " " + students[6].phone);
 
 
         newStudents.studentCount(5);
@@ -55,11 +55,10 @@ public class Main {
             String phoneNumber = scan.nextLine();
             newStudents.removerStudent(phoneNumber);
 
-            System.out.println(newStudents.manyStudents + "students left");
+            System.out.println(newStudents.manyStudents + "students left" + " Bermet and Aidana");
             break;
         }
 
-        System.out.println(students[5] + " Aibek left " + students[6] + " Alice left");
 
         for (Student d : newStudents.students) {
             if (d != null) {
@@ -70,7 +69,3 @@ public class Main {
         System.out.println("End");
     }
 }
-
- /*  System.out.println(students[0].name + " " + students[0].phone + " " + students[1].name + " " + students[1].phone + " " + students[2].name + " " + students[2].phone);
-        System.out.println(students[5].name + " " + students[5].phone + " " + students[6].name + " " + students[6].phone);
-        System.out.print(students[3].name + " " + students[3].phone + " " + students[4].name + " " + students[4].phone);*/
