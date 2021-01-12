@@ -65,13 +65,12 @@ public class Main {
                 System.out.print(" Enter 1 students phone number to remove: ");
                 String phoneNumber = scan.nextLine();
                 newStudents.removerStudent(phoneNumber);
-                System.out.println(newStudents.manyStudents);
-
+                System.out.println(newStudents.anotherStudents);
 
                 System.out.print(" Enter 2 students phone number to remove: ");
                 String phoneNumber2 = scan.nextLine();
                 newStudents.removerStudent2(phoneNumber2);
-                System.out.println(newStudents.manyStudents);
+                System.out.println(newStudents.anotherStudents);
                 break;
             }
 
