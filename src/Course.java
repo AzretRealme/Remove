@@ -5,7 +5,7 @@ public class Course {
     int duration;
     Student[] students;
     Teacher[] teachers;
-    int manyStudents;
+    int anotherStudents;
 
     public void teacherCount(int count) {
         teachers = new Teacher[count];
@@ -24,14 +24,22 @@ public class Course {
         }
         return false;
     }
-    public int removerStudent(String phoneNumber) {
-        for (int i = 0; i < manyStudents; i++) {
+
+    public void removerStudent(String phoneNumber) {
+        for (int i = 0; i < students.length; i++) {
             if (students[i].phone.equals(phoneNumber)) {
                 students[i] = null;
-                manyStudents--;
+                break;
             }
         }
-        return manyStudents;
+    }
+    public void removerStudent2(String phoneNumber2) {
+        for (int i = 0; i < students.length; i++) {
+            if (students[i].phone.equals(phoneNumber2)) {
+                students[i] = null;
+                break;
+            }
+        }
     }
     public boolean addTeachers(Teacher teacher) {
 
@@ -43,5 +51,4 @@ public class Course {
         }
         return false;
     }
-
 }
