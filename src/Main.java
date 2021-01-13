@@ -9,7 +9,7 @@ public class Main {
 
         Course easyIt = new Course();
         easyIt.name = "easyIt";
-        System.out.println("easyIt course java");
+        System.out.println(" КУРСЫ ИЗИ АЙТИ");
 
         easyIt.teacherCount(2);
         boolean s1 = easyIt.addTeachers(teacher);
@@ -18,15 +18,15 @@ public class Main {
 
         for (Teacher s : easyIt.teachers) {
             if (s != null) {
-                System.out.println(s.name + " " + s.phone);
+                System.out.println(s.name + " " + s.phone + "  -----БЫЛИ ДОБАВЛЕНЫ УЧИТЕЛЯ ДЖАВА");
             }
         }
-        Student student = new Student("Aibek", "9965554444");
-        Student student1 = new Student("Karls", "99655322222");
+        Student student = new Student("Alina", "9965554444");
+        Student student1 = new Student("Ajara", "99655322222");
         easyIt.studentCount(2);
         boolean g1 = easyIt.addStudents(student);
         boolean g2 = easyIt.addStudents(student1);
-        System.out.println(g1 + " " + g2);
+        System.out.println(g1 + " " + g2 + ".  ----Алина и Ажара передумали ходить");
 
         for (Student h : easyIt.students) {
             if (h != null) {
@@ -45,7 +45,7 @@ public class Main {
 
         Course newStudents = new Course();
         newStudents.name = "newStudents";
-        System.out.println("newStudents");
+        System.out.println(" ВСЕ СТУДЕНТЫ КОТОРЫЕ ПОСЕЩАЮТ КУРСЫ, БУДУТ ПОКАЗАНЫ НИЖЕ");
 
         System.out.println(students[0].name + " " + students[0].phone + " " + students[1].name + " " + students[1].phone + " " + students[2].name + " " + students[2].phone);
         System.out.print(students[3].name + " " + students[3].phone + " " + students[4].name + " " + students[4].phone + " ");
@@ -63,19 +63,18 @@ public class Main {
 
 //        students[5] = null;
 //        students[6] = null;
-
         if (newStudents.students.length > 0) {
-            System.out.print(" Enter 1 students phone number to remove: ");
+            System.out.print(" УДАЛИТЬ ОДНОГО СТУДЕНТА ПО НОМЕРУ ТЕЛЕФОНА, КОТОРЫЙ НЕ ОПЛАТИЛ ЗА МЕСЯЦ : ");
             String phoneNumber = scan.nextLine();
             newStudents.removerStudent(phoneNumber);
-            System.out.println(newStudents.phoneNumberDelete  + " firstNumber ");
+            System.out.println(newStudents.phoneNumberDelete  + " БЫЛ УДАЛЕН ПЕРВЫЙ СТУДЕНТ ");
 
             }
         if(newStudents.students.length > 1) {
-            System.out.print(" Enter 2 students phone number to remove: ");
+            System.out.print(" УДАЛИТЬ ВТОРОГО СТУДЕНТА ПО НОМЕРУ ТЕЛЕФОНА, КОТОРЫЙ НЕ ОПЛАТИЛ ЗА МЕСЯЦ : ");
             String phoneNumber = scan.nextLine();
             newStudents.removerStudent(phoneNumber);
-            System.out.println(newStudents.phoneNumberDelete + " endNumber ");
+            System.out.println(newStudents.phoneNumberDelete + " БЫЛ УДАЛЕН ВТОРОЙ СТУДЕНТ ");
         }
 
             for (Student d : newStudents.students) {
@@ -84,8 +83,7 @@ public class Main {
                 }
             }
 
-            System.out.println("End");
+            System.out.println("  ОСТАЛОСЬ ПЯТЬ СТУДЕНТОВ, КОТОРЫЕ УСПЕШНО ОПЛАТИЛИ ЗА УЧЕБУ");
         }
     }
-
 
