@@ -1,3 +1,4 @@
+
 public class Course {
     int id;
     String name;
@@ -5,7 +6,7 @@ public class Course {
     int duration;
     Student[] students;
     Teacher[] teachers;
-    int anotherStudents;
+    String phoneNumberDelete = "phoneNumberDelete";
 
     public void teacherCount(int count) {
         teachers = new Teacher[count];
@@ -19,28 +20,22 @@ public class Course {
         for (int i = 0; i < students.length; i++) {
             if (students[i] == null) {
                 students[i] = student;
-                return true;
+                return false;
             }
         }
-        return false;
+        return true;
     }
 
     public void removerStudent(String phoneNumber) {
+
         for (int i = 0; i < students.length; i++) {
-            if (students[i].phone.equals(phoneNumber)) {
+            if (students[i].phone == phoneNumber) {
                 students[i] = null;
                 break;
             }
         }
     }
-    public void removerStudent2(String phoneNumber2) {
-        for (int i = 0; i < students.length; i++) {
-            if (students[i].phone.equals(phoneNumber2)) {
-                students[i] = null;
-                break;
-            }
-        }
-    }
+
     public boolean addTeachers(Teacher teacher) {
 
         for (int i = 0; i < teachers.length; i++) {
