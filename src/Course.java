@@ -6,7 +6,8 @@ public class Course {
     int duration;
     Student[] students;
     Teacher[] teachers;
-    String phoneNumberDelete = "phoneNumberDelete";
+    String phoneNumberDelete = " ДЕНЬ ОПЛАТЫ: ";
+    String phoneNumber;
 
     public void teacherCount(int count) {
         teachers = new Teacher[count];
@@ -29,9 +30,9 @@ public class Course {
     public void removerStudent(String phoneNumber) {
 
         for (int i = 0; i < students.length; i++) {
-            if (students[i].phone == phoneNumber) {
+            if (students[i].phone != null && students[i].phone.equalsIgnoreCase(phoneNumber)) {
                 students[i] = null;
-                break;
+                 break;
             }
         }
     }
@@ -47,3 +48,4 @@ public class Course {
         return false;
     }
 }
+
