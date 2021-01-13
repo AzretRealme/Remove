@@ -48,8 +48,8 @@ public class Main {
         System.out.println("newStudents");
 
         System.out.println(students[0].name + " " + students[0].phone + " " + students[1].name + " " + students[1].phone + " " + students[2].name + " " + students[2].phone);
-        System.out.print(students[3].name + " " + students[3].phone + " " + students[4].name + " " + students[4].phone+ " ");
-        System.out.println( students[5].name + " " + students[5].phone + " " + students[6].name + " " + students[6].phone);
+        System.out.print(students[3].name + " " + students[3].phone + " " + students[4].name + " " + students[4].phone + " ");
+        System.out.println(students[5].name + " " + students[5].phone + " " + students[6].name + " " + students[6].phone);
 
 
         newStudents.studentCount(7);
@@ -61,26 +61,31 @@ public class Main {
         newStudents.addStudents(students[5]);
         newStudents.addStudents(students[6]);
 
-        while(newStudents.students.length > 0) {
-                System.out.print(" Enter 1 students phone number to remove: ");
-                String phoneNumber = scan.nextLine();
-                newStudents.removerStudent(phoneNumber);
-                System.out.println(newStudents.anotherStudents);
+//        students[5] = null;
+//        students[6] = null;
 
-                System.out.print(" Enter 2 students phone number to remove: ");
-                String phoneNumber2 = scan.nextLine();
-                newStudents.removerStudent2(phoneNumber2);
-                System.out.println(newStudents.anotherStudents);
-                break;
+        if (newStudents.students.length > 0) {
+            System.out.print(" Enter 1 students phone number to remove: ");
+            String phoneNumber = scan.nextLine();
+            newStudents.removerStudent(phoneNumber);
+            System.out.println(newStudents.phoneNumberDelete  + " firstNumber ");
+
             }
-
-
-        for (Student d : newStudents.students) {
-            if (d != null) {
-                System.out.println(d.name + " " + d.phone);
-            }
+        if(newStudents.students.length > 1) {
+            System.out.print(" Enter 2 students phone number to remove: ");
+            String phoneNumber = scan.nextLine();
+            newStudents.removerStudent(phoneNumber);
+            System.out.println(newStudents.phoneNumberDelete + " endNumber ");
         }
 
-        System.out.println("End");
+            for (Student d : newStudents.students) {
+                if (d != null) {
+                    System.out.println(d.name + " " + d.phone);
+                }
+            }
+
+            System.out.println("End");
+        }
     }
-}
+
+
