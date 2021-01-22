@@ -21,10 +21,10 @@ public class Course {
         for (int i = 0; i < students.length; i++) {
             if (students[i] == null) {
                 students[i] = student;
-                return false;
+                return true;
             }
         }
-        return true;
+        return false;
     }
 
     public void removerStudent(String phoneNumber) {
