@@ -5,16 +5,14 @@ public class Main {
         Scanner scan = new Scanner(System.in);
 
         Teacher teacher = new Teacher("Bakdoolot Baike", "996555457854");
-        Teacher teacher1 = new Teacher("Dolon Baike", "996555457854");
 
         Course easyIt = new Course();
         easyIt.name = "easyIt";
         System.out.println(" КУРСЫ ИЗИ АЙТИ");
 
-        easyIt.teacherCount(2);
+        easyIt.teacherCount(1);
         boolean s1 = easyIt.addTeachers(teacher);
-        boolean s2 = easyIt.addTeachers(teacher1);
-        System.out.println(s1 + " " + s2);
+        System.out.println(s1);
 
         for (Teacher s : easyIt.teachers) {
             if (s != null) {
